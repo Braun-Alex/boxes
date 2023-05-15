@@ -1,10 +1,6 @@
 #pragma once
-#include "inverse.h"
 #include <array>
-#include <iostream>
-#include <algorithm>
 #include <cmath>
-#include <bitset>
 
 class sBox {
 public:

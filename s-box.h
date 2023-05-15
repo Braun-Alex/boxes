@@ -4,6 +4,7 @@
 #include <iostream>
 #include <algorithm>
 #include <cmath>
+#include <bitset>
 
 class sBox {
 public:
@@ -27,5 +28,5 @@ private:
                                          10, 6, 5, 11,
                                          14, 13, 4, 2,
                                          7, 0, 9, 12},
-                                      inverseSerpentBox;
+                                      inverseSerpentBox = directSerpentBox;
 };

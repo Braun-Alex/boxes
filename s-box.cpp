@@ -66,12 +66,10 @@ std::array<bool, 8> sBox::transform(std::array<bool, 8> sequence, Box option) {
     return result;
 }
 
-// Updating inverse Serpent S-box with using of algorithm of finding inverse element in GF(16)
+// Updating inverse Serpent S-box
 void sBox::updateInverseSerpentBox() {
     size_t size = inverseSerpentBox.size();
     for (int i = 0; i < size; i++) {
-        if (directSerpentBox[i] != 0) {
-            directSerpentBox[i] = inverse(directSerpentBox[i], 16);
-        }
+        inverseSerpentBox[directSerpentBox[i]] = i;
     }
 }

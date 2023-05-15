@@ -6,12 +6,12 @@ int main() {
             0, 1, 1, 1
     };
     std::array<bool, 8> result = sBox::substitute(number);
-    for (const auto& bit: result) {
+    for (const auto &bit: result) {
         std::cout << bit;
     }
     std::cout << std::endl;
     result = sBox::restore(result);
-    for (const auto& bit: result) {
+    for (const auto &bit: result) {
         std::cout << bit;
     }
     return 0;

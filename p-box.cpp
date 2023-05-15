@@ -7,7 +7,7 @@ std::array<bool, 8> pBox::shuffle(std::array<bool, 8> sequence) {
 
 // Inverse transformation with inverse P-box
 std::array<bool, 8> pBox::restore(std::array<bool, 8> sequence) {
-    // Just in case, inverseSerpentBox has to be updated
+    // Just in case, inverseShufflingBox has to be updated
     updateInverseShufflingBox();
     return transform(sequence, Box::INVERSE);
 }
@@ -37,7 +37,7 @@ std::array<bool, 8> pBox::transform(std::array<bool, 8> sequence, Box option) {
     return result;
 }
 
-// Updating inverse P-box
+// Updating of inverse P-box
 void pBox::updateInverseShufflingBox() {
     size_t size = inverseShufflingBox.size();
     for (int i = 0; i < size; i++) {

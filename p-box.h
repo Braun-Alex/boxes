@@ -17,7 +17,7 @@ public:
 private:
     // Transformation with P-box
     static std::array<bool, 8> transform(std::array<bool, 8> sequence, Box option);
-    // Updating inverse P-box
+    // Updating of inverse P-box
     static void updateInverseShufflingBox();
     inline static std::array<int, 8> directShufflingBox = {0, 2, 4, 6,
                                                             1, 3, 5, 7},

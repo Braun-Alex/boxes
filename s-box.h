@@ -17,7 +17,7 @@ public:
 private:
     // Transformation with S-box
     static std::array<bool, 8> transform(std::array<bool, 8> sequence, Box option);
-    // Updating inverse Serpent S-box
+    // Updating of inverse Serpent S-box
     static void updateInverseSerpentBox();
     // This particular S-box is used in the Serpent cryptosystem
     inline static std::array<int, 16> directSerpentBox = {3, 8, 15, 1,
